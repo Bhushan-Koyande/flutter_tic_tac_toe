@@ -136,6 +136,8 @@ class _MultiPlayerGamePageState extends State<MultiPlayerGamePage> {
       for (int i = 0; i < 9; i++) {
         board[i] = '';
       }
+
+      oTurn = true;
     });
 
     filledBoxes = 0;
@@ -208,7 +210,10 @@ class _MultiPlayerGamePageState extends State<MultiPlayerGamePage> {
                 onPressed: () {
                   _resetScores();
                 },
-                child: const Text('RESET')),
+                child: const Text(
+                  'RESET',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
           )
         ],
       ),
